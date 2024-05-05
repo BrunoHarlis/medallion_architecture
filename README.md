@@ -12,14 +12,14 @@ Minha experiência foi usando a FiveTran como ferramenta de ingestão e Databric
 
 # Sumário
 
-1. [Desvendando a Arquitetura Medallion](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#desvendando-a-arquitetura-medallion)
-2. [Criando a Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#criando-a-camada-bronze)
-    1. [Objetivo da Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#objetivo-da-camada-bronze)
-    2. [Descrição do Problema](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#descrição-do-problema)
-    3. [Solução](https://github.com/BrunoHarlis/medallion_architecture/tree/main?tab=readme-ov-file#solu%C3%A7%C3%A3o)
-    4. [Conclusão](https://github.com/BrunoHarlis/medallion_architecture/tree/main?tab=readme-ov-file#conclus%C3%A3o)
+1. [Desvendando a Arquitetura Medallion](https://github.com/BrunoHarlis/medallion_architecture#desvendando-a-arquitetura-medallion)
+2. [Criando a Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture#criando-a-camada-bronze)
+    1. [Objetivo da Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture#objetivo-da-camada-bronze)
+    2. [Descrição do Problema](https://github.com/BrunoHarlis/medallion_architecture#descri%C3%A7%C3%A3o-do-problema)
+    3. [Solução](https://github.com/BrunoHarlis/medallion_architecture#solu%C3%A7%C3%A3o)
+    4. [Conclusão](https://github.com/BrunoHarlis/medallion_architecture#conclus%C3%A3o)
     5. [Script bronze layer](https://github.com/BrunoHarlis/medallion_architecture/blob/main/bronze_layer/bronze_etl.py)
-4. [Criando a Camada Silver](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#criando-a-camada-silver)
+4. [Criando a Camada Silver](https://github.com/BrunoHarlis/medallion_architecture#criando-a-camada-silver)
 
 
 # Desvendando a Arquitetura Medallion
