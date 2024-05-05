@@ -16,8 +16,8 @@ Minha experiência foi usando a FiveTran como ferramenta de ingestão e Databric
 2. [Criando a Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#criando-a-camada-bronze)
     1. [Objetivo da Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#objetivo-da-camada-bronze)
     2. [Descrição do Problema](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#descrição-do-problema)
-    3. [Solução](https://github.com/BrunoHarlis/medallion_architecture/edit/main/README.md#solu%C3%A7%C3%A3o)
-    4. [Conclusão](https://github.com/BrunoHarlis/medallion_architecture/edit/main/README.md#conclus%C3%A3o)
+    3. [Solução](https://github.com/BrunoHarlis/medallion_architecture/tree/main?tab=readme-ov-file#solu%C3%A7%C3%A3o)
+    4. [Conclusão](https://github.com/BrunoHarlis/medallion_architecture/tree/main?tab=readme-ov-file#conclus%C3%A3o)
     5. [Script bronze layer](https://github.com/BrunoHarlis/medallion_architecture/blob/main/bronze_layer/bronze_etl.py)
 4. [Criando a Camada Silver](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#criando-a-camada-silver)
 
