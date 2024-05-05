@@ -12,11 +12,14 @@ Minha experiência foi usando a FiveTran como ferramenta de ingestão e Databric
 
 # Sumário
 
-1. Desvendando a Arquitetura Medallion
-2. Criando a Camada Bronze
-    1. Descrição do Problema
-    2. Script bronze layer
-3. Criando a Camada Silver
+1. [Desvendando a Arquitetura Medallion](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#desvendando-a-arquitetura-medallion)
+2. [Criando a Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#criando-a-camada-bronze)
+    1. [Objetivo da Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#objetivo-da-camada-bronze)
+    2. [Descrição do Problema](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#descrição-do-problema)
+    3. [Solução](https://github.com/BrunoHarlis/medallion_architecture/edit/main/README.md#solu%C3%A7%C3%A3o)
+    4. [Conclusão](https://github.com/BrunoHarlis/medallion_architecture/edit/main/README.md#conclus%C3%A3o)
+    5. [Script bronze layer](https://github.com/BrunoHarlis/medallion_architecture/blob/main/bronze_layer/bronze_etl.py)
+4. [Criando a Camada Silver](https://github.com/BrunoHarlis/medallion_architecture/blob/main/README.md#criando-a-camada-silver)
 
 
 # Desvendando a Arquitetura Medallion
@@ -26,14 +29,14 @@ Minha experiência foi usando a FiveTran como ferramenta de ingestão e Databric
 
 O objetivo é termos as tabelas na camada bronze idênticas às que estão na base de dados, com todas as atualizações e deletes. 
 
-## Hambientação
+## Descrição do Problema
 
 Antes de começar a mostrar o código, vou explicar como funciona a ingestão de dados do FiveTran pois é fundamental para entendimento da extratégia abordada. 
 Basicamente, o FiveTran faz a ingestão de duas formas, uma em modo incremental que vai sempre adicionando novos registros ao fim da tabela, nunca apagando ou atualizando. A outra em modo soft delete que funciona quase como uma tabela em um banco relacional onde os registros que sofrem modificações são de fato atualizados, com a diferença em como o delete é feito. Em vez de apagar o registro da tabela, ele é atualizado adicionando uma flag informando que esse registro é um registro do tipo deletado (_fivetran_delete = true), sendo esse último o método escohido aqui nesse projeto.
 
 Tendo isso em mente, escolhemos criar uma camada adicional na arquitetura medallion chamada Raw onde ficarão nossos dados brutos. Nessa camada o FiveTran comanda, podendo fazer resync, criação de novas tabelas, atualizações e etc. 
 
-## Start
+## Solução
 
 Temos que pegar os registros que estão chegando na camada Raw e passar para a camada Bronze. O processo de ETL usando Structure Streaming do Spark é ótimo para isso, mas aqui temos nosso primeiro problema.
 
@@ -91,3 +94,5 @@ Aqui assumirei que a tabela bronze já está criada, portanto carregaremos ela e
 
 ## Conclusão
 Esse método que mostrei resolve a maioria dos problemas simples de um ETL para a camada bronze, porém a coisa pode começar a complicar se você for lidar com multiplas bases de dados com milhares de tabelas em cada base. Recomendo fazer um script "genérico" mais elaborado que englobe e automatize dodas as transformações necessárias. Por exemplo, aqui assumi que a tabela bronze foi criada manualmente antes do ETL, isso se torna impraticável para um ambiente com milhares de tabelas. Seria um tempo disperdiado criar todas elas manualmente. Será necessário criar um fluxo de criação de tabelas automatizado.
+
+# Criando a Camada Silver
