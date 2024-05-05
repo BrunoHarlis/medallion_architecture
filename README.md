@@ -13,7 +13,10 @@ Minha experiência foi usando a FiveTran como ferramenta de ingestão e Databric
 # Sumário
 
 1. [Desvendando a Arquitetura Medallion](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#desvendando-a-arquitetura-medallion)
-2. [Criando a Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#criando-a-camada-bronze)
+    1. [Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#camada-bronze)
+    2. [Camada Silver](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#camada-silver)
+    3. [Camada Gold](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#camada-gold)
+3. [Criando a Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#criando-a-camada-bronze)
     1. [Objetivo da Camada Bronze](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#objetivo-da-camada-bronze)
     2. [Descrição do Problema](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#descri%C3%A7%C3%A3o-do-problema)
     3. [Solução](https://github.com/BrunoHarlis/medallion_architecture?tab=readme-ov-file#solu%C3%A7%C3%A3o)
