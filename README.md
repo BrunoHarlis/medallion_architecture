@@ -24,6 +24,8 @@ Minha experiência foi usando a FiveTran como ferramenta de ingestão e Databric
 
 # Desvendando a Arquitetura Medallion
 
+[gif medallion architecture](https://github.com/BrunoHarlis/medallion_architecture/blob/main/imagens/medallion_architecture.gif)
+
 # Criando a Camada Bronze
 ## Objetivo da Camada Bronze
 
